@@ -8,7 +8,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      myName: 'Ray',
       myAppointments: []
     }
   }
@@ -29,6 +28,9 @@ class App extends Component {
   }
 
   render() {
+
+    
+
     return(
       <main className="page bg-white" id="petratings">
         <div className="container">
@@ -37,7 +39,7 @@ class App extends Component {
               <div className="container">
                 <AddAppointments />
                 <SearchAppointments />
-                <ListAppointments />
+                <ListAppointments appointments={this.state.myAppointments}/>
               </div>
             </div>
           </div>
