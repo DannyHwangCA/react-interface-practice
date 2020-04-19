@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../css/App.css';
 
 class App extends Component {
   render() {
     return(
-      <main class="page bg-white" id="petratings">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 bg-white">
-              <div class="container">
+      <main className="page bg-white" id="petratings">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 bg-white">
+              <div className="container">
                 <div>Add Appointments</div>
                 <div>Search Appointments</div>
                 <div>List Appointments</div>
