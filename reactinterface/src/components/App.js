@@ -5,6 +5,29 @@ import ListAppointments from './ListAppointments';
 import SearchAppointments from './SearchAppointments';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      myName: 'Ray',
+      myAppointments: []
+    }
+  }
+
+  componentDidMount() {
+    fetch('./data.json')
+      .then(function(response) {
+        return response.json()
+      })
+      .then(result => {
+        const apts = result.map(item => {
+          return item;
+        })
+        this.setState({
+          myAppointments: apts
+        })
+      }) 
+  }
+
   render() {
     return(
       <main className="page bg-white" id="petratings">
